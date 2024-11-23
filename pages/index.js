@@ -3,7 +3,7 @@ import { useState } from 'react';
 export default function Home() {
 
   // const API_ENDPOINT="http://localhost:5000";
-  const API_ENDPOINT="https://tech0-gen-8-step3-testapp-py1-1.azurewebsites.net:5000";
+  const API_ENDPOINT="https://tech0-gen-8-step3-testapp-py1-1.azurewebsites.net";
   
   //GETリクエストを送信
   const [getResponse, setGetResponse] = useState('');
