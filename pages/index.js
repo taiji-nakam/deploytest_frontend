@@ -29,7 +29,7 @@ export default function Home() {
   const handleIdRequest = async (e) => {
     e.preventDefault();
 
-    const res = await fetch(`http://localhost:5000/api/multiply/${id}`, {
+    const res = await fetch(API_ENDPOINT +  `/api/multiply/${id}`, {
       method: 'GET',
     });
     const data = await res.json();
@@ -50,7 +50,7 @@ export default function Home() {
     //入力されたデータをコンソールに表示
     console.log("入力情報:", input);
 
-    const res = await fetch('http://localhost:5000/api/echo', {
+    const res = await fetch(API_ENDPOINT +  '/api/echo', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
