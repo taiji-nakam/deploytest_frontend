@@ -9,6 +9,8 @@ export default function Home() {
   const [getResponse, setGetResponse] = useState('');
 
   const handleGetRequest = async () => {
+    console.log("======CALL URI:======");
+    colsole.log(API_ENDPOINT + '/api/hello');
     const res = await fetch(API_ENDPOINT + '/api/hello', {
       method: 'GET',
     });
@@ -28,7 +30,8 @@ export default function Home() {
   // IDを指定してGETリクエストを送信
   const handleIdRequest = async (e) => {
     e.preventDefault();
-
+    console.log("======CALL URI:======");
+    colsole.log(API_ENDPOINT +  `/api/multiply/${id}`);
     const res = await fetch(API_ENDPOINT +  `/api/multiply/${id}`, {
       method: 'GET',
     });
@@ -49,7 +52,8 @@ export default function Home() {
 
     //入力されたデータをコンソールに表示
     console.log("入力情報:", input);
-
+    console.log("======CALL URI:======");
+    colsole.log(API_ENDPOINT +  '/api/echo');
     const res = await fetch(API_ENDPOINT +  '/api/echo', {
       method: 'POST',
       headers: {
