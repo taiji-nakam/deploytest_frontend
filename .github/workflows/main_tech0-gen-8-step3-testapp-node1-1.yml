@@ -42,7 +42,11 @@ jobs:
         with:
           name: node-app
           path: release.zip
-
+      
+      # 管理操作（例: 設定変更）とデプロイ操作を短時間で連続して行った際に発生する場合がある→Sleep
+      - name: Wait for 30 seconds
+        run: sleep 30
+        
   deploy:
     runs-on: ubuntu-latest
     needs: build
