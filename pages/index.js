@@ -2,16 +2,11 @@ import { useState } from 'react';
 
 export default function Home() {
 
-  // const API_ENDPOINT="http://localhost:5000";
-  const API_ENDPOINT="https://tech0-gen-8-step3-testapp-py1-1.azurewebsites.net";
-  
   //GETリクエストを送信
   const [getResponse, setGetResponse] = useState('');
 
   const handleGetRequest = async () => {
-    console.log("======CALL URI:======");
-    colsole.log(API_ENDPOINT + '/api/hello');
-    const res = await fetch(API_ENDPOINT + '/api/hello', {
+    const res = await fetch('https://tech0-gen-8-step3-testapp-py1-1.azurewebsites.net/api/hello', {
       method: 'GET',
     });
     const data = await res.json();
@@ -30,9 +25,8 @@ export default function Home() {
   // IDを指定してGETリクエストを送信
   const handleIdRequest = async (e) => {
     e.preventDefault();
-    console.log("======CALL URI:======");
-    colsole.log(API_ENDPOINT +  `/api/multiply/${id}`);
-    const res = await fetch(API_ENDPOINT +  `/api/multiply/${id}`, {
+
+    const res = await fetch(`https://tech0-gen-8-step3-testapp-py1-1.azurewebsites.net/api/multiply/${id}`, {
       method: 'GET',
     });
     const data = await res.json();
@@ -52,9 +46,8 @@ export default function Home() {
 
     //入力されたデータをコンソールに表示
     console.log("入力情報:", input);
-    console.log("======CALL URI:======");
-    colsole.log(API_ENDPOINT +  '/api/echo');
-    const res = await fetch(API_ENDPOINT +  '/api/echo', {
+
+    const res = await fetch('https://tech0-gen-8-step3-testapp-py1-1.azurewebsites.net/api/echo', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
