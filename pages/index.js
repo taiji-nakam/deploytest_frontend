@@ -67,8 +67,8 @@ export default function Home() {
 
   return (
     <div>
-
-      <h1>Next.jsとFlaskの連携アプリ：Azureデプロイ</h1>
+      <h1>Azure:deploy</h1>
+      <h1>Next.jsとFlaskの連携アプリ</h1>
 
       <h2>GETリクエストを送信</h2>
       <button onClick={handleGetRequest}>GETリクエストを送信</button>
